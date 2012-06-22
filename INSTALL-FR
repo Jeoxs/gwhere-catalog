@@ -1,0 +1,54 @@
+
+Installation
+============
+
+La façon la plus simple de compiler ce paquetage est :
+
+  1. `cd' le répertoire qui contient l'archive du propramme et taper tar -xvzf "nom_archive"
+  [user@localhost]#tar -xvfz gwhere-x.x.x.tar.gz
+  ou
+  [user@localhost]#tar -xvfz gwhere-x.x.x.tar.bz2
+
+  2. `cd' le nouveau répertoire qui contient le code source.
+  [user@localhost]#cd gwhere-x.x.x
+
+  3. Taper "./configure" pour configurer la compilation.
+  [user@localhost]#./configure
+
+  Pour activer le mode débugage il taper utiliser l'option --enable-debug-all.
+  [user@localhost]#./configure --enable-debug-all
+
+  Pour activer la compilation avec GTK 1.2 il taper utiliser l'option --enable-gtk12.
+  [user@localhost]#./configure --enable-gtk12
+
+  Pour activer la compilation avec GTK 2.0 il taper utiliser l'option --enable-gtk20.
+  [user@localhost]#./configure --enable-gtk20
+
+  Pour sélectionner le SE cible de construction utiliser l'option --target=votre_SE
+  Par exemple pour GNU/Linux
+  [user@localhost]#./configure --target=linux
+
+  Ou pour Cygwin
+  [user@localhost]#./configure --target=cygwin
+
+  4. Taper `make' pour compiler the programme.
+  [user@localhost]#make
+
+  5. Passer en root en tapant "su root".
+  [user@localhost]#su root
+
+  6. Et taper `make install'.
+  [user@localhost]make install
+
+  7. Amusez-vous!! Pour lancer GWhere taper gwhere!!
+  [user@localhost]gwhere
+
+  Pour plus d'information sur GWhere, lire le fichier README.
+                                                      ------
+
+Il y a surement beaucoup de bugs, mais n'ayez pas peur de m'envoyer un mail (zero@gwhere.org)
+pour me dire que vous en avez trouvé ou pour me proposer des amélioration, ou tout simplement
+pour me dire que vous utilisez mon programme.
+
+Quand vous m'envoyer un mail, donnez la configuration de votre machine et OS (distribution) que
+vous utilisez!! Merci

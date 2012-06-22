@@ -1,0 +1,187 @@
+[ ] - Bug connu
+[X] - Bug corrigé
+
+
+GWhere 0.2.3
+[X] - Blocage sur les fichiers de tube lorsque l'option "description automatique" est activée.
+[X] - La fermeture de la boite de dialogue de résultat vide d'une recherche provoque un "seg fault".
+[ ] - L'importation d'un catalogue CSV provoque un "seg fault" sous Slackware.
+
+GWhere 0.2.2
+[] - Le mode debug plante.
+
+GWhere 0.2.1
+[X] - Il manque intl.dll sous win32.
+[ ] - Quand GWhere est lancé à partir de l'installeur win32, il ne trouve pas les plugins d'import/export.
+
+GWhere 0.2.0
+[X] - Le raccourci et l'icone de GWhere ne sont pas corrects pour le gestionnaire de fenêtres.
+[ ] - Lorsque que la colonne "Nom" est cachée, il y a des problèmes d'affichage.
+[ ] - Les labels des CDs gravés sous Windows sont de la forme "METAL_20" au lieu de "Metal 20".
+
+GWhere 0.1.6
+[X] - Les plugins de description ne sont pas chargés sous win32.
+[X] - Les fichiers sélectionnés ne sont pas affichés correctement (avec le fond bleu) avec GTK+ 2.x sous Linux.
+[X] - Impossible de supprimer une description avec la fonctionnalité "Editer la description".
+
+GWhere 0.1.5
+[X] - Mauvais barre de status qd on fait "nouveau catalogue->ajouter disque->annuler->ajouter disque".
+[X] - Scanne tous les points de montage internes qd un point de montage est scanné (par exemple tous les /mnt/* qd / est scanné).
+[X] - La liste des catalogues récemment ouverts n'est pas toujours raffraichie.
+[X] - Les répertoires protégés ne sont pas affichés avec le bon icone.
+[X] - Plantage quand GWhere est lancé avec le paramètre d'un fichier de catalogue qui se trouve dans le répertoire courant.
+[X] - Plantage quand le nom de disque et le libellé sont vides alors que l'option "utiliser le libellé de disque comme nom de disque" est cochée.
+[X] - Quand un catalogue est renommé et enregistré, le nom affiché est le nom de fichier du catalogue.
+
+GWhere 0.1.4
+[X] - Les utilisateurs normaux n'ont pas toujours GWhere traduit quand il a été installé par l'administrateur sous Win32.
+[X] - Les éléments sélectionnés ne sont pas affichés correctement (avec le fond bleu) avec GTK+ 2.x sous Linux.
+
+GWhere 0.1.3
+[X] - Bug avec la lecture des fichiers /etc/fstab et /etc/mtab files.
+[X] - Segmentation fault quand on essaie de mounter automatiquement un périphérique.
+[X] - Le répertoire de configuration de GWhere n'est pas accessible.
+[X] - Les lignes vides dans les fichiers descript.ion provoque une segmentation de mémoire.
+[X] - Les fichiers et réportoires de plus de 2,1 Go ne sont pas supportés.
+
+GWhere 0.1.2
+[X] - La catégorie n'est pas sélectionnée dans la boîte de propriétés.
+[X] - Les options de chargement automatique de fichier de catalogues ne sont pas correctement chargées.
+[ ] - Ne peut pas scanner des répertoires ou fichiers avec des caractères spéciaux si le SE n'a pas la bonne locale.
+[ ] - Dans le cas de disques multi-session, la taille est celle de la dernière session sous win32.
+[X] - N'enregistre pas un catalogue non modifié quand on utilise la fonction "Enregistrer sous".
+[X] - Les fichiers temporaires ne sont pas effacés sous win32.
+[X] - Si le scanne est annulé car il n'y a pas de catalogue d'ouvert ou pas de nom de disque tous les champs sont effacés.
+[X] - Il n'y a pas de statistiques de catalogue avec un catalogue construit sous win32.
+[ ] - Scanne le premier label du disque multi-session au lieu du dernier sous Linux.
+[X] - L'ouverture d'un catalogue avec des espaces dans le chemin à partir de l'explorateur win32 échoue.
+[X] - Ouvrir un catalogue dans la liste des récents quand un catalogue non enregistré est ouvert cause un "seg fault".
+[X] - Les propriétés par défaut ne sont pas utilisées lors du premier chargement de GWhere dans l'onglet "Gestion des disques".
+[X] - Le chargement de GWhere est trop long sous Win 95/98/ME.
+[X] - Les chaines UTF-8 ne sont pas toujours bien affichées.
+[X] - Toutes les informations sur les FS ne sont pas chargées.
+[X] - Les FS ISO 9660 ne sont pas toujours détectés.
+
+GWhere 0.1.1
+[X] - Plus d'un élément de résultat à la racine d'un disque dans la recherche cause un "seg fault".
+[X] - Double encodage en UTF-8 lors de la demande d'enregistrement d'un catalogue.
+[X] - Le répertoire d'acceuil de GWhere n'est pas toujours créé.
+[X] - Certains disques ont "Not yet implemented" comme type de système de fichiers.
+[X] - Les plugins ne sont pas accessible avec la version RPM.
+[X] - Impossible d'afficher le menu popup du premier ficheir listé (à la racine du disque).
+
+GWhere 0.1.0
+[X] - Ne charge pas les plugins lorsque l'on ouvre un catalogue à partir d'un explorateur sous win32.
+[X] - La localisation (traduction) ne fonctionne pas quand on ouvre un catalogue à partir d'un explorateur sous win32.
+[X] - La lecture de fichiers compressés échoue sous win32 (obligation de passer par un fichier temporaire).
+[X] - La barre des statuts est erronée dans on crée un nouveau catalogue dans l'onglet Gestion.
+[ ] - Ne vérifie pas si le fichier du catalgoue existe déjà quand on enregistre un nouveau fichier (le fichier est donc écrasé).
+[ ] - Depuis l'utilisation de LIBTOOL le fichier src/Makefile.in généré est incorrect. On doit supprimer manuellement "../libtool --mode=link".
+[X] - Bug quand la valeur maximale d'une barre de progression est supérieure à 4 294 967 296 bytes.
+[X] - Il n'y a pas de répertoire utilisateur sur les systèmes win9x.
+[X] - Toutes les dates ne sont pas traduites.
+[X] - Réouvrir le dernier catalogue ouvert provoque la double référence du catalogue dans la liste des fichiers récemments ouverts.
+[X] - Un clique sur les croix de l'arbre d'exploration n'ouvre/ferme pas le noeud.
+[ ] - Quand on clique sur le bouton d'une liste déroulante, le premier élément est séléectionné.
+[ ] - L'application démarre en plein écran, mais la fenêtre n'est pas maximisée.
+[X] - Le renommage du nom de volume d'un disque change the nom du disque dans l'arbre d'exploration.
+[ ] - Bug avec les disques plus grand que 18 446 744 073 709 551 616 octets!!
+[X] - Bug avec les disques plus grand que 4 294 967 296 octets.
+[X] - Le renommage d'un catalogue change le nom du fichier au lieu du nom du catalogue.
+[X] - L'effacement du premier fichier dans un répertoire cause une segmentation de mémoire.
+[X] - Le nom du système de fichiers et le chemin d'accès du fichier n'est pas encodé quand le catalogue est enregistré..
+[X] - Le répertoire de configurationde GWhere est créé sans les droits d'exécution.
+[X] - Bugs dans le parseur du fichier de configuration.
+[X] - Scannage circulaire avec les liens symboliques circulaires.
+
+GWhere 0.0.26
+[X] - Le numéro d'archive des disques n'est pas chargé correctement.
+[ ] - La liste des périphériques n'est pas raffraichie après mise à jour de fstab ou mtab.
+[ ] - L'encodage en base 64 plante sous Cygwin.
+[X] - La fonction gw_file_mkdirs() ne fonctionne pas si le nom du chemin se termine par un "/".
+[X] - Impossible de sauvegarder le fichier de propriétés quand le répertoire .GWhere n'existe pas dans le home de l'utilisateur.
+[X] - La fonction "ajout d'un disque" dans le menu contextuel ne fait rien.
+[X] - Bug pour le renommage d'un catalogue avec le menu contextuel.
+[X] - Le décalage des caractères ne va pas jusqu'à la fin de la chaine dans gw_str_delete_char.
+
+GWhere 0.0.25
+[X] - Fuites de mémoires dans le moteur de recherche.
+[X] - Tous les fichiers ".." sont comptés dans la barre des status.
+[X] - Le titre de la boîte A propos est en français et ne peut pas être traduit.
+
+GWhere 0.0.24
+[X] - La modification des descriptions ne fonctionne pas.
+[X] - Le résultat de la recherche n'est pas vidé quand option expression regulière est activée.
+[X] - La recherche plante quand aucun catalogue n'est pas chargé.
+[X] - Les fonctions de désallocation ne désallouent pas toujours toute la mémoire.
+
+GWhere 0.0.23
+[ ] - L'espace utilisé par un disque est supérieur à la somme de la taille de ses fichiers.
+[X] - Ne retourne pas dans le répertoire courant qd l'ajout d'un disque échoue.
+[ ] - Impossible de mettre le raccourci clavier sur le bouton OK de la barre de progression.
+[ ] - Qd on ouvre une seconde fenêtre de dialogue, la première se ferme.
+
+GWhere 0.0.22
+[X] - N'ajoute pas une nouvelle catégorie.
+[X] - Bug avec les répertoires commencant par "." ou ".."
+[X] - Bug avec les propriétaires ou groupes inconnus de fichiers.
+[X] - Détection de la présence d'un disque
+
+GWhere 0.0.21
+[X] - Bug d'affichage de la capicité/espace libre des disques.
+[X] - Chargement inversé entre la taille et l'inoeud des répertoires/fichiers.
+[X] - L'application boucle quand on ajout un disque et qu'il n'y a pas de catalogue d'ouvert.
+
+GWhere 0.0.20
+[X] - Bug qd on change de catégorie un disque/répertoire/fichier.
+[ ] - Quand on quitte les propriétés la sélection retourne au premier élément de la liste.
+[ ] - combo_box_categories_set_selected_category_name est buggée.
+[X] - Le clique droit ne sélectionne pas.
+[X] - Problème sur l'enregistrement des catégories des disques/répertoires/fichiers.
+[X] - La recherche d'une catégorie par nom ne fonctionne pas.
+[X] - Le fichier est corrumpu si l'utilisateur met des ":" dans les noms des catalogues/disque/répertoires/fichiers.
+[X] - L'affichage de la date dans l'explorateur est en français.
+[ ] - L'affichage des informations sur le périphérique sélectionné est tronqué.
+[X] - Possibilité d'éditer/supprimer la catégorie par défaut.
+
+GWhere 0.0.19
+[X] - Ne charge pas tous les points de montage.
+[X] - Qd on supprime une catégorie il faut modifier tous les indexes.
+
+GWhere 0.0.18
+[X] - Qd on fait "Save As" puis "Close" => CoreDumped
+[X] - Il faut mettre des interfaces pour les données (car bcp de problème avec (null) au lieu de "").
+
+GWhere 0.0.17
+[X] - Les statistiques sur les types de disk dans le catalogue sont erronées.
+[X] - La fenêtre d'info pour scanner le disk ne se rafraichie pas.
+[X] - Problème lors de la lecture du label sur une FAT16.
+[ ] - Mettre une boîte de dialogue lors du chargement d'un catalogue, l'ajout d'un disk, ou la recherche.
+[X] - La barre de status doit être mise à jour selon l'onglet où l'on se trouve.
+[ ] - Le type auto n'est plus supporté.
+[X] - Essaie de faire une image même si le disk n'est pas monté.
+[X] - Le lecteur de CD-Rom se ferme qd on lance l'application ou bien lorsque l'on clique sur ce périphérique.
+[X] - Qd un disk n'est pas monté, ne pas afficher les informations.
+[X] - Qd un disk n'a pas de label, retourner (null) au lieu de "No label".
+[X] - Problèmes avec le supermount GNU.
+[ ] - Le type de partition est mal défini. Un CD-Rom n'a pas toujours "/dev/cdrom" ou "/dev/scd" comme fichier (ex: "/dev/hdd").
+
+GWhere 0.0.16
+[X] - Le nom du catalogue est (null) dans la barre des status qd on en crée un nouveau.
+[X] - La barre des status n'est pas mise à jour qd on ferme un catalogue.
+[X] - Qd on clique dans la zone d'info des fichiers alors qu'il n'y a pas de catalogue ouvert => CoreDumped.
+[X] - Qd on quitte (ou ferme) sans enregistrer un nouveau catalogue => CoreDumped
+[X] - CoreDumped avec "RemoveFolder from Disk"!!
+[X] - Le "Move To", qd on est dans l'arbre d'exploration ne fonctionne pas.
+[ ] - Lorsque l'on clique dans le vide dans la liste des infos des fichiers, il affiche dans la status barre les infos du premier élément??
+[X] - Pb lors de l'enregistrement (surement le "Save As" avec catalog_file_info).
+[X] - Il y a surement un problème lorsqu'une description contient des retours à la ligne.
+[X] - CoreDumped avec rename_disk().
+[X] - Qd on ajoute un disk vérifer que le nom de disk n'existe pas déjà!!
+[X] - Problème des tailles lorsqu'un élément est supprimé!!
+
+GWhere 0.0.0
+[X] - La traduction ne fonctionne pas (NLS I18N).
+
+
+Ca avance mon gars!!
