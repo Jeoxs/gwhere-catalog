@@ -1,4 +1,4 @@
-libdir = $(exec_prefix)/share/${PACKAGE}/plugins/catalog
+libdir = $(exec_prefix)/lib/${PACKAGE}/plugins/catalog
 
 lib_LTLIBRARIES = libgwplugincataloggwcatalog.la
 

@@ -1,4 +1,4 @@
-libdir = $(exec_prefix)/share/${PACKAGE}/plugins/descr
+libdir = $(exec_prefix)/lib/${PACKAGE}/plugins/descr
 
 lib_LTLIBRARIES = libgwplugindescriptionavi.la \
 			libgwplugindescriptiondescript_ion.la \
