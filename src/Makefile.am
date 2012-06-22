@@ -36,4 +36,4 @@ gwhere_LDADD = \
 	@GTK_LIBS@ \
 	$(INTLLIBS)
 
-gwhere_LDFLAGS = \
+gwhere_LDFLAGS =
