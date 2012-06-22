@@ -1,6 +1,6 @@
 ## Process this file with automake to produce Makefile.in
 
-SUBDIRS = debian slackware doc intl po src win32
+SUBDIRS = slackware doc intl po src win32
 
 ApplicationGnomedir = $(datadir)/gnome/apps/Applications
 ApplicationGnome_DATA = gwhere.desktop
