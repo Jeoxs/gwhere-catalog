@@ -2,7 +2,7 @@
 
 SUBDIRS = slackware doc intl po src win32
 
-ApplicationGnomedir = $(datadir)/gnome/apps/Applications
+ApplicationGnomedir = $(datadir)/applications
 ApplicationGnome_DATA = gwhere.desktop
 
 ApplicationKDEdir = $(datadir)/applnk/Applications
