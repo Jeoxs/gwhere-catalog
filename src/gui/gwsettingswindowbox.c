@@ -79,7 +79,7 @@ GtkWindow * gw_settings_window_box_create ( GtkWindow *window)
 	if ( !settings_window_box )
 	{
 		settings_window_box = gtk_window_new ( GTK_WINDOW_DIALOG);
-		g_strdup_to_gtk_text ( _( "This Settings box allows to configure some functionnalities and properties of the program."), text_utf8);
+		g_strdup_to_gtk_text ( _( "This Settings window allows you to configure the program to work the way you want."), text_utf8);
 		gtk_tooltips_set_tip ( tooltips, settings_window_box, text_utf8, NULL);
 		g_free ( text_utf8);
 		g_strdup_to_gtk_text ( _( "Settings"), text_utf8);
@@ -117,7 +117,7 @@ GtkWindow * gw_settings_window_box_create ( GtkWindow *window)
 		gtk_object_set_data_full ( GTK_OBJECT ( settings_window_box), GW_REF_SETTINGS_WINDOW_BOX_CTREE, ctree_settings, (GtkDestroyNotify) gtk_widget_unref);
 		gtk_paned_pack1 ( GTK_PANED ( hp_settings), ctree_settings, FALSE, TRUE);
 		gtk_container_set_border_width ( GTK_CONTAINER ( ctree_settings), 5);
-		g_strdup_to_gtk_text ( _( "Select the section to configure."), text_utf8);
+		g_strdup_to_gtk_text ( _( "Select in this pane a category of settings to configure."), text_utf8);
 		gtk_tooltips_set_tip ( tooltips, ctree_settings, text_utf8, NULL);
 		g_free ( text_utf8);
 
@@ -131,7 +131,7 @@ GtkWindow * gw_settings_window_box_create ( GtkWindow *window)
 		gtk_object_set_data_full ( GTK_OBJECT ( settings_window_box), GW_REF_SETTINGS_WINDOW_BOX_NOTEBOOK, notebook_settings, (GtkDestroyNotify) gtk_widget_unref);
 		gtk_paned_pack2 ( GTK_PANED ( hp_settings), notebook_settings, TRUE, TRUE);
 		GTK_WIDGET_UNSET_FLAGS ( notebook_settings, GTK_CAN_FOCUS);
-		g_strdup_to_gtk_text ( _( "Change in this pane all availables properties in order to configure the program as you want."), text_utf8);
+		g_strdup_to_gtk_text ( _( "Change settings in this pane to configure the program as you want."), text_utf8);
 		gtk_tooltips_set_tip ( tooltips, notebook_settings, text_utf8, NULL);
 		g_free ( text_utf8);
 		gtk_notebook_set_show_tabs ( GTK_NOTEBOOK ( notebook_settings), FALSE);
@@ -142,7 +142,7 @@ GtkWindow * gw_settings_window_box_create ( GtkWindow *window)
 		home_notebook_page = gtk_vbox_new ( FALSE, 0);
 		gtk_container_set_border_width ( GTK_CONTAINER ( home_notebook_page), 5);
 		gtk_container_add ( GTK_CONTAINER ( notebook_settings), home_notebook_page);
-		g_strdup_to_gtk_text ( _( "This settings windows box allows to configure the program. Some properties may be modified here."), text_utf8);
+		g_strdup_to_gtk_text ( _( "This settings window allows you to configure the program to work the way you want."), text_utf8);
 		text_home_notebook_page = gtk_label_new ( text_utf8);
 		g_free ( text_utf8);
 		gtk_label_set_justify ( GTK_LABEL ( text_home_notebook_page), GTK_JUSTIFY_FILL);
@@ -195,7 +195,7 @@ GtkWindow * gw_settings_window_box_create ( GtkWindow *window)
 		gtk_widget_ref ( btn_apply);
 		gtk_object_set_data_full ( GTK_OBJECT ( settings_window_box), GW_REF_SETTINGS_WINDOW_BOX_APPLY_BTN, btn_apply, (GtkDestroyNotify) gtk_widget_unref);
 		gtk_box_pack_start ( GTK_BOX ( hb_settings_controls), btn_apply, TRUE, TRUE, 10);
-		g_strdup_to_gtk_text ( _( "Click on Apply button to apply changes (without close the Settings box)."), text_utf8);
+		g_strdup_to_gtk_text ( _( "Click on Apply button to apply changes without closing the Settings box."), text_utf8);
 		gtk_tooltips_set_tip ( tooltips, btn_apply, text_utf8, NULL);
 		g_free ( text_utf8);
 		gtk_widget_set_sensitive ( GTK_WIDGET ( btn_apply), FALSE);

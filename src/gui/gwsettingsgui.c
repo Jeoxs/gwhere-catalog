@@ -95,7 +95,7 @@ gint gw_plugin_settings_gui_pane_create ( GtkWindow *settings, GtkContainer *par
 		g_free ( text_utf8);
 		gtk_widget_ref ( chk_autosave);
 		gtk_object_set_data_full ( GTK_OBJECT ( table_pane), GW_PLUGIN_SETTINGS_GUI_AUTOSAVE_CHK, chk_autosave, (GtkDestroyNotify) gtk_widget_unref);
-		g_strdup_to_gtk_text ( _( "Save GUI properties as window position and size."), text_utf8);
+		g_strdup_to_gtk_text ( _( "Save the window position and size."), text_utf8);
 		gtk_tooltips_set_tip ( tooltips, chk_autosave, text_utf8, NULL);
 		g_free ( text_utf8);
 		gtk_table_attach ( GTK_TABLE ( table_pane), chk_autosave, 0, 1, 0, 1, (GtkAttachOptions) ( GTK_FILL), (GtkAttachOptions) (0), 0, 0);
@@ -106,7 +106,7 @@ gint gw_plugin_settings_gui_pane_create ( GtkWindow *settings, GtkContainer *par
 		g_free ( text_utf8);
 		gtk_widget_ref ( chk_beep);
 		gtk_object_set_data_full ( GTK_OBJECT ( table_pane), GW_PLUGIN_SETTINGS_GUI_BEEP_CHK, chk_beep, (GtkDestroyNotify) gtk_widget_unref);
-		g_strdup_to_gtk_text ( _( "Allows to emits a short beep on some event."), text_utf8);
+		g_strdup_to_gtk_text ( _( "Emit an audible beep after some events."), text_utf8);
 		gtk_tooltips_set_tip ( tooltips, chk_beep, text_utf8, NULL);
 		g_free ( text_utf8);
 		gtk_table_attach ( GTK_TABLE ( table_pane), chk_beep, 0, 1, 1, 2, (GtkAttachOptions) ( GTK_FILL), (GtkAttachOptions) (0), 0, 0);

@@ -170,7 +170,7 @@ GtkWidget * gw_notebook_managment_create ( GtkWindow * window)
 		hb_disk_selection = gtk_hbox_new ( FALSE, 0);
 		gtk_container_set_border_width ( GTK_CONTAINER ( hb_disk_selection), 10);
 		gtk_box_pack_start ( GTK_BOX ( vb_new_disk_control), hb_disk_selection, TRUE, TRUE, 0);
-		g_strdup_to_gtk_text ( _( "Select the media that will be added as disk to your catalog."), text_utf8);
+		g_strdup_to_gtk_text ( _( "Select the media that will be added as a disk to your catalog."), text_utf8);
 		gtk_tooltips_set_tip ( tooltips_group, hb_disk_selection, text_utf8, NULL);
 		g_free ( text_utf8);
 	
@@ -229,7 +229,7 @@ GtkWidget * gw_notebook_managment_create ( GtkWindow * window)
 		hb_disk_name = gtk_hbox_new ( FALSE, 0);
 		gtk_box_pack_start ( GTK_BOX ( vb_new_disk_control), hb_disk_name, TRUE, TRUE, 0);
 		gtk_container_set_border_width ( GTK_CONTAINER ( hb_disk_name), 10);
-		g_strdup_to_gtk_text ( _( "Enter the name of the new disk. This name will be appear in your catalog."), text_utf8);
+		g_strdup_to_gtk_text ( _( "Enter the name of the new disk to identify it in your catalog."), text_utf8);
 		gtk_tooltips_set_tip ( tooltips_group, hb_disk_name, text_utf8, NULL);
 		g_free ( text_utf8);
 	
@@ -258,7 +258,7 @@ GtkWidget * gw_notebook_managment_create ( GtkWindow * window)
 		gw_combo_box_categories_load ( cmb_categories);
 		gtk_box_pack_start ( GTK_BOX ( vb_new_disk_control), GTK_WIDGET ( cmb_categories), TRUE, TRUE, 0);
 		gtk_container_set_border_width ( GTK_CONTAINER ( cmb_categories), 10);
-		g_strdup_to_gtk_text ( _( "Select the category to apply to the disk which will be added (even if the option is checked)."), text_utf8);
+		g_strdup_to_gtk_text ( _( "Select the category to apply to the disk which will be added (even if the option is selected)."), text_utf8);
 		gtk_tooltips_set_tip ( tooltips_group, GTK_WIDGET ( cmb_categories), text_utf8, NULL);
 		g_free ( text_utf8);
 	
@@ -401,7 +401,7 @@ GtkWidget * gw_notebook_managment_create ( GtkWindow * window)
 		gtk_signal_connect ( GTK_OBJECT ( chk_display_device_info), "clicked", GTK_SIGNAL_FUNC ( gw_notebook_managment_refresh_info), window);
 		gtk_container_set_border_width ( GTK_CONTAINER ( chk_display_device_info), 5);
 		gtk_box_pack_start ( GTK_BOX ( vb_options), chk_display_device_info, FALSE, FALSE, 0);
-		g_strdup_to_gtk_text ( _( "Displays selected media informations as path, capacity, free space, label,..."), text_utf8);
+		g_strdup_to_gtk_text ( _( "Display information about the selected media, such as path, capacity, free space, label,..."), text_utf8);
 		gtk_tooltips_set_tip ( tooltips_group, chk_display_device_info, text_utf8, NULL);
 		g_free ( text_utf8);
 
@@ -415,7 +415,7 @@ GtkWidget * gw_notebook_managment_create ( GtkWindow * window)
 		gtk_signal_connect ( GTK_OBJECT ( chk_automount_device), "clicked", GTK_SIGNAL_FUNC (gw_notebook_managment_option_automount_click), window);
 		gtk_container_set_border_width ( GTK_CONTAINER ( chk_automount_device), 5);
 		gtk_box_pack_start ( GTK_BOX ( vb_options), chk_automount_device, FALSE, FALSE, 0);
-		g_strdup_to_gtk_text ( _( "Mount the media if it wasn't mounted. And unmount after the media even if it was mounted before the scan."), text_utf8);
+		g_strdup_to_gtk_text ( _( "Mount the media if it isn't already mounted. And unmount after scanning the media, even if it was mounted before the scan."), text_utf8);
 		gtk_tooltips_set_tip ( tooltips_group, chk_automount_device, text_utf8, NULL);
 		g_free ( text_utf8);
 #endif
@@ -429,7 +429,7 @@ GtkWidget * gw_notebook_managment_create ( GtkWindow * window)
 		gtk_signal_connect ( GTK_OBJECT ( chk_explore_tree_structure), "clicked", GTK_SIGNAL_FUNC (gw_notebook_managment_option_explore_tree_structure_click), window);
 		gtk_container_set_border_width ( GTK_CONTAINER ( chk_explore_tree_structure), 5);
 		gtk_box_pack_start ( GTK_BOX ( vb_options), chk_explore_tree_structure, FALSE, FALSE, 0);
-		g_strdup_to_gtk_text ( _( "Keep this option checked to scan all folders and files informations."), text_utf8);
+		g_strdup_to_gtk_text ( _( "Keep this option selected to scan all folders and files informations."), text_utf8);
 		gtk_tooltips_set_tip ( tooltips_group, chk_explore_tree_structure, text_utf8, NULL);
 		g_free ( text_utf8);
 
@@ -442,7 +442,7 @@ GtkWidget * gw_notebook_managment_create ( GtkWindow * window)
 		gtk_signal_connect ( GTK_OBJECT ( chk_explore_archive_files), "clicked", GTK_SIGNAL_FUNC (gw_notebook_managment_option_explore_archive_click), window);
 		gtk_container_set_border_width ( GTK_CONTAINER ( chk_explore_archive_files), 5);
 		gtk_box_pack_start ( GTK_BOX ( vb_options), chk_explore_archive_files, FALSE, FALSE, 0);
-		g_strdup_to_gtk_text ( _( "Not yet implemented!!\nExplore all archives, as it was a directory. Archives are tarred or gzipped files."), text_utf8);
+		g_strdup_to_gtk_text ( _( "Not yet implemented!!\nExplore archives as if they were directories. Archives are tarred or gzipped files."), text_utf8);
 		gtk_tooltips_set_tip ( tooltips_group, chk_explore_archive_files, text_utf8, NULL);
 		g_free ( text_utf8);
 	
@@ -455,7 +455,7 @@ GtkWidget * gw_notebook_managment_create ( GtkWindow * window)
 		gtk_signal_connect ( GTK_OBJECT ( chk_auto_eject_device), "clicked", GTK_SIGNAL_FUNC (gw_notebook_managment_option_eject_click), window);
 		gtk_container_set_border_width ( GTK_CONTAINER ( chk_auto_eject_device), 5);
 		gtk_box_pack_start ( GTK_BOX ( vb_options), chk_auto_eject_device, FALSE, FALSE, 0);
-		g_strdup_to_gtk_text ( _( "Eject the media if possible (CD-ROM...), even if the tray was closed. This is enable only if automount is enable!!"), text_utf8);
+		g_strdup_to_gtk_text ( _( "Eject the media if possible (CD-ROM...), even if the tray was closed. This is possible only if automount is enabled!!"), text_utf8);
 		gtk_tooltips_set_tip ( tooltips_group, chk_auto_eject_device, text_utf8, NULL);
 		g_free ( text_utf8);
 	
@@ -468,7 +468,7 @@ GtkWidget * gw_notebook_managment_create ( GtkWindow * window)
 		gtk_signal_connect ( GTK_OBJECT ( chk_category_recursively), "clicked", GTK_SIGNAL_FUNC (gw_notebook_managment_option_category_click), window);
 		gtk_container_set_border_width ( GTK_CONTAINER ( chk_category_recursively), 5);
 		gtk_box_pack_start ( GTK_BOX ( vb_options), chk_category_recursively, FALSE, FALSE, 0);
-		g_strdup_to_gtk_text ( _( "Apply selected category to all items in the disk to add (disk, folders and files)."), text_utf8);
+		g_strdup_to_gtk_text ( _( "Apply selected category to all items in the disk (disk, folders and files)."), text_utf8);
 		gtk_tooltips_set_tip ( tooltips_group, chk_category_recursively, text_utf8, NULL);
 		g_free ( text_utf8);
 	

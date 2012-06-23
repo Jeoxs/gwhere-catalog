@@ -112,18 +112,18 @@ gint gw_plugin_settings_search_pane_create ( GtkWindow *settings, GtkContainer *
 		g_free ( text_utf8);
 		gtk_widget_ref ( chk_sort_case_sensitive);
 		gtk_object_set_data_full ( GTK_OBJECT ( table_pane), GW_PLUGIN_SETTINGS_SEARCH_SORT_CASE_SENSITIVE_CHK, chk_sort_case_sensitive, (GtkDestroyNotify) gtk_widget_unref);
-		g_strdup_to_gtk_text ( _( "The result sort in search is case sensitive."), text_utf8);
+		g_strdup_to_gtk_text ( _( "If this option is selected sorting in the explorer will be case sensitive."), text_utf8);
 		gtk_tooltips_set_tip ( tooltips, chk_sort_case_sensitive, text_utf8, NULL);
 		g_free ( text_utf8);
 		gtk_table_attach ( GTK_TABLE ( table_pane), chk_sort_case_sensitive, 0, 1, 0, 1, (GtkAttachOptions) ( GTK_FILL), (GtkAttachOptions) (0), 0, 0);
 
 		/* Adds the sort group by type option. */
-		g_strdup_to_gtk_text ( _( "Result sort group by type."), text_utf8);
+		g_strdup_to_gtk_text ( _( "Group by type."), text_utf8);
 		chk_sort_group_by = gtk_check_button_new_with_label ( text_utf8);
 		g_free ( text_utf8);
 		gtk_widget_ref ( chk_sort_group_by);
 		gtk_object_set_data_full ( GTK_OBJECT ( table_pane), GW_PLUGIN_SETTINGS_SEARCH_SORT_GROUP_BY_TYPE_CHK, chk_sort_group_by, (GtkDestroyNotify) gtk_widget_unref);
-		g_strdup_to_gtk_text ( _( "The result sort in search can be grouped by item type. If this option is checked all item will be grouped by catalogs, disks, folders and files."), text_utf8);
+		g_strdup_to_gtk_text ( _( "If this option is selected, search results will be grouped by type: catalogs, disks, folders and files."), text_utf8);
 		gtk_tooltips_set_tip ( tooltips, chk_sort_group_by, text_utf8, NULL);
 		g_free ( text_utf8);
 		gtk_table_attach ( GTK_TABLE ( table_pane), chk_sort_group_by, 0, 1, 1, 2, (GtkAttachOptions) ( GTK_FILL), (GtkAttachOptions) (0), 0, 0);
@@ -134,7 +134,7 @@ gint gw_plugin_settings_search_pane_create ( GtkWindow *settings, GtkContainer *
 		g_free ( text_utf8);
 		gtk_widget_ref ( chk_autoresize);
 		gtk_object_set_data_full ( GTK_OBJECT ( table_pane), GW_PLUGIN_SETTINGS_SEARCH_AUTORESIZE_COLUMN_CHK, chk_autoresize, (GtkDestroyNotify) gtk_widget_unref);
-		g_strdup_to_gtk_text ( _( "Autoresize all explorer column."), text_utf8);
+		g_strdup_to_gtk_text ( _( "Autoresize columns in search results."), text_utf8);
 		gtk_tooltips_set_tip ( tooltips, chk_autoresize, text_utf8, NULL);
 		g_free ( text_utf8);
 		gtk_table_attach ( GTK_TABLE ( table_pane), chk_autoresize, 0, 1, 2, 3, (GtkAttachOptions) ( GTK_FILL), (GtkAttachOptions) (0), 0, 0);
@@ -145,7 +145,7 @@ gint gw_plugin_settings_search_pane_create ( GtkWindow *settings, GtkContainer *
 		g_free ( text_utf8);
 		gtk_widget_ref ( chk_key_words_mode);
 		gtk_object_set_data_full ( GTK_OBJECT ( table_pane), GW_PLUGIN_SETTINGS_SEARCH_KEY_WORDS_MODE_CHK, chk_key_words_mode, (GtkDestroyNotify) gtk_widget_unref);
-		g_strdup_to_gtk_text ( _( "Choose if all key words or only one of all key words must match with item in order to be in the search result."), text_utf8);
+		g_strdup_to_gtk_text ( _( "If this option is selected a key words search will only find files which contain all the key words.  If it is not selected a simple search will find files which contain any of the key words."), text_utf8);
 		gtk_tooltips_set_tip ( tooltips, chk_key_words_mode, text_utf8, NULL);
 		g_free ( text_utf8);
 		gtk_table_attach ( GTK_TABLE ( table_pane), chk_key_words_mode, 0, 1, 3, 4, (GtkAttachOptions) ( GTK_FILL), (GtkAttachOptions) (0), 0, 0);

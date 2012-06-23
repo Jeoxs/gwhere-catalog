@@ -148,7 +148,7 @@ gint gw_plugin_settings_mail_pane_create ( GtkWindow *settings, GtkContainer *pa
 		gtk_widget_ref ( ent_server_address);
 		gtk_object_set_data_full ( GTK_OBJECT ( table_pane), GW_PLUGIN_SETTINGS_SERVER_ADDRESS_ENTRY, ent_server_address, (GtkDestroyNotify) gtk_widget_unref);
 		gtk_table_attach ( GTK_TABLE ( table_pane), ent_server_address, 1, 2, 1, 2, (GtkAttachOptions) (GTK_EXPAND | GTK_FILL), (GtkAttachOptions) (0), 0, 0);
-		g_strdup_to_gtk_text ( _( "Enter your out going mail server. Usualy this address is mail.yourdomain.com"), text_utf8);
+		g_strdup_to_gtk_text ( _( "Enter your outgoing mail server. Usually this address is mail@yourdomain.com"), text_utf8);
 		gtk_tooltips_set_tip ( tooltips, ent_server_address, text_utf8, NULL);
 		g_free ( text_utf8);
 
@@ -163,7 +163,7 @@ gint gw_plugin_settings_mail_pane_create ( GtkWindow *settings, GtkContainer *pa
 		gtk_widget_ref ( ent_server_port);
 		gtk_object_set_data_full ( GTK_OBJECT ( table_pane), GW_PLUGIN_SETTINGS_SERVER_PORT_ENTRY, ent_server_port, (GtkDestroyNotify) gtk_widget_unref);
 		gtk_table_attach ( GTK_TABLE ( table_pane), ent_server_port, 1, 2, 2, 3, (GtkAttachOptions) (GTK_EXPAND | GTK_FILL), (GtkAttachOptions) (0), 0, 0);
-		g_strdup_to_gtk_text ( _( "Enter the out going mail server port (the most common value is 25)."), text_utf8);
+		g_strdup_to_gtk_text ( _( "Enter the outgoing mail server port (the most common value is 25)."), text_utf8);
 		gtk_tooltips_set_tip ( tooltips, ent_server_port, text_utf8, NULL);
 		g_free ( text_utf8);
 

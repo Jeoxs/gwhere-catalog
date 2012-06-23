@@ -82,7 +82,7 @@ GtkWindow * gw_mail_window_box_create ( GtkWindow *window, gchar *file_name)
 	if ( !w )
 	{
 		w = gtk_window_new ( GTK_WINDOW_TOPLEVEL);
-		g_strdup_to_gtk_text ( _( "This window box allows you to send a catalog by mail to one (or more) of yours contacts."), text_utf8);
+		g_strdup_to_gtk_text ( _( "This window box allows you to send a catalog by mail to one (or more) of your contacts."), text_utf8);
 		gtk_tooltips_set_tip ( tooltips, GTK_WIDGET ( w), text_utf8, NULL);
 		g_free ( text_utf8);
 		g_strdup_to_gtk_text ( _( "Send mail"), text_utf8);

@@ -149,8 +149,8 @@ GtkWidget * gw_window_box_about_create ( GtkWindow *window)
                 text = g_strconcat ( PROJECT_NAME,
                                 "-",
                                 VERSION,
-                                _( "\nRemovable media catalog managment\nBy Sebastien LECACHEUR\n\nzero@gwhere.org\nhttp://www.gwhere.org\n"),
-                                _( "GWhere allows to manage a database of yours CDs and others removable media (hard disks, floppy drive, Zip drive, CD- ROM, etc...). With GWhere it's easy to browse yours CDs or to make quick search without need to insert yours CDs in the drive at each once."),
+                                _( "\nRemovable media catalog management\nBy Sebastien LECACHEUR\n\nzero@gwhere.org\nhttp://www.gwhere.org\n"),
+                                _( "GWhere allows you to manage a database of your CDs and other removable media (hard disks, floppy drive, Zip drive, CD- ROM, etc...). With GWhere it's easy to browse your CDs or to make a quick search without needing to insert all of your CDs in the drive and search them one by one."),
                                 _( "\n\nRuns under "),
                                 os_version,
                                 NULL);

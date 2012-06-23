@@ -132,7 +132,7 @@ gint gw_plugin_settings_catalog_file_pane_create ( GtkWindow *settings, GtkConta
 #if defined ( HAVE_GTK12)
 		gtk_spin_button_set_shadow_type ( GTK_SPIN_BUTTON ( spn_catalog_level_compression), GTK_SHADOW_OUT);
 #endif
-		g_strdup_to_gtk_text ( _( "Select the catalog compression level. The default value is 3, it's a good value between high performance and small size."), text_utf8);
+		g_strdup_to_gtk_text ( _( "Select the catalog compression level. The default value is 3, it's a good compromise between high performance and small size."), text_utf8);
 		gtk_tooltips_set_tip ( tooltips, spn_catalog_level_compression, text_utf8, NULL);
 		g_free ( text_utf8);
 
@@ -155,7 +155,7 @@ gint gw_plugin_settings_catalog_file_pane_create ( GtkWindow *settings, GtkConta
 #if defined ( HAVE_GTK12)
 		gtk_spin_button_set_shadow_type ( GTK_SPIN_BUTTON ( spn_catalog_history_size), GTK_SHADOW_OUT);
 #endif
-		g_strdup_to_gtk_text ( _( "Select the size of recently opened catalogs history. The default value is 5."), text_utf8);
+		g_strdup_to_gtk_text ( _( "Select the number of recently opened catalogs to remember."), text_utf8);
 		gtk_tooltips_set_tip ( tooltips, spn_catalog_history_size, text_utf8, NULL);
 		g_free ( text_utf8);
 
@@ -166,7 +166,7 @@ gint gw_plugin_settings_catalog_file_pane_create ( GtkWindow *settings, GtkConta
 		btn_history_clear = gtk_button_new_with_label ( text_utf8);
 		g_free ( text_utf8);
 		gtk_signal_connect ( GTK_OBJECT ( btn_history_clear), "clicked", (GtkSignalFunc)gw_plugin_settings_catalog_file_btn_clear_history_click, table_pane);
-		g_strdup_to_gtk_text ( _( "Click here to clear the recently opened files history."), text_utf8);
+		g_strdup_to_gtk_text ( _( "Click here to clear the list of recently opened files."), text_utf8);
 		gtk_tooltips_set_tip ( tooltips, btn_history_clear, text_utf8, NULL);
 		g_free ( text_utf8);
 		gtk_table_attach ( GTK_TABLE ( table_pane), btn_history_clear, 1, 2, 2, 3, (GtkAttachOptions) (GTK_FILL), (GtkAttachOptions) (0), 0, 0);
@@ -177,7 +177,7 @@ gint gw_plugin_settings_catalog_file_pane_create ( GtkWindow *settings, GtkConta
 		g_free ( text_utf8);
 		gtk_widget_ref ( chk_autoload);
 		gtk_object_set_data_full ( GTK_OBJECT ( table_pane), GW_PLUGIN_SETTINGS_CATALOG_AUTOLOAD_CHK, chk_autoload, (GtkDestroyNotify) gtk_widget_unref);
-		g_strdup_to_gtk_text ( _( "Autoloads a default catalog when at starting."), text_utf8);
+		g_strdup_to_gtk_text ( _( "Autoloads a default catalog when Gwhere starts."), text_utf8);
 		gtk_tooltips_set_tip ( tooltips, chk_autoload, text_utf8, NULL);
 		g_free ( text_utf8);
 		gtk_table_attach ( GTK_TABLE ( table_pane), chk_autoload, 0, 1, 3, 4, (GtkAttachOptions) ( GTK_FILL), (GtkAttachOptions) (0), 0, 0);
@@ -202,7 +202,7 @@ gint gw_plugin_settings_catalog_file_pane_create ( GtkWindow *settings, GtkConta
 		entry_autoload_filepath = gtk_entry_new ( );
 		gtk_widget_ref ( entry_autoload_filepath);
 		gtk_object_set_data_full ( GTK_OBJECT ( table_pane), GW_PLUGIN_SETTINGS_CATALOG_AUTOLOAD_ENTRY, entry_autoload_filepath, (GtkDestroyNotify) gtk_widget_unref);
-		g_strdup_to_gtk_text ( _( "Enter the full catalog file path to load."), text_utf8);
+		g_strdup_to_gtk_text ( _( "Enter the full path to the catalog file."), text_utf8);
 		gtk_tooltips_set_tip ( tooltips, entry_autoload_filepath, text_utf8, NULL);
 		g_free ( text_utf8);
 		gtk_table_attach ( GTK_TABLE ( table_pane), entry_autoload_filepath, 1, 2, 5, 6, (GtkAttachOptions) ( GTK_FILL), (GtkAttachOptions) (0), 0, 0);
