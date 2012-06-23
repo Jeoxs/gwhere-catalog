@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-23 20:09+1200\n"
+"POT-Creation-Date: 2012-06-23 20:55+1200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -313,16 +313,16 @@ msgid "Open catalog"
 msgstr ""
 
 #. if ( gw_db_catalog_get_db_name ( catalog)!=NULL && strlen ( gw_db_catalog_get_db_name ( catalog))>0 ) {
-#. msg[1] = g_strconcat ( _( "Would you want save catalog :\n\n"), gw_db_catalog_get_db_name ( catalog), "\n", NULL);
+#. msg[1] = g_strconcat ( _( "Do you want to save catalog :\n\n"), gw_db_catalog_get_db_name ( catalog), "\n", NULL);
 #. } else {
-#. msg[1] = g_strconcat ( _( "Would you want save catalog :\n\n"), gw_db_catalog_get_name ( catalog), "\n", NULL);
+#. msg[1] = g_strconcat ( _( "Do you want to save catalog :\n\n"), gw_db_catalog_get_name ( catalog), "\n", NULL);
 #. }
 #. If has been modified, ask to save it before open another catalog
 #: src/gui/gwmenufilecallback.c:102 src/gui/gwmenufilecallback.c:138
 #: src/gui/gwmenufilecallback.c:180 src/gui/gwmenufilecallback.c:461
 #: src/gui/gwmenufilecallback.c:1367
 msgid ""
-"Would you want save catalog :\n"
+"Do you want to save catalog :\n"
 "\n"
 msgstr ""
 

@@ -85,7 +85,7 @@ typedef struct gw_mail_s
 /*! @define	GW_VALUE_APP_CATALOG_LAST	The variable name for the last opened catalog */
 #define GW_VALUE_APP_CATALOG_LAST "GWhere.application.catalog.last"
 /*! @define	GW_VALUE_APP_RECENT_FILES	The variable name for recently opened files */
-#define GW_VALUE_APP_RECENT_FILES "GWhere.application.recent.files"
+#define GW_VALUE_APP_RECENT_FILES "GWhere.application.recents.files"
 /*! @define	GW_VALUE_APP_RECENT_SIZE	The variable name for the size of recent opened files list */
 #define GW_VALUE_APP_RECENT_SIZE "GWhere.application.recent.size"
 /*! @define	GW_VALUE_APP_RECENT_SIZE_DEFAULT	The default size of recent opened file list */
