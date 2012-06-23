@@ -46,8 +46,8 @@
 #define GW_REF_MENU_BAR_FILE_MENU_EXPORT "gw_menu_bar_file_menu_export"
 /*! @define	GW_REF_MENU_BAR_FILE_MENU_PROPERTIES	The file menu -> properties reference */
 #define GW_REF_MENU_BAR_FILE_MENU_PROPERTIES "gw_menu_bar_file_menu_properties"
-/*! @define	GW_REF_MENU_BAR_FILE_MENU_RECENTS_FILES	The file menu -> recents files reference */
-#define GW_REF_MENU_BAR_FILE_MENU_RECENTS_FILES "gw_menu_bar_file_menu_recents_files"
+/*! @define	GW_REF_MENU_BAR_FILE_MENU_RECENT_FILES	The file menu -> recent files reference */
+#define GW_REF_MENU_BAR_FILE_MENU_RECENT_FILES "gw_menu_bar_file_menu_recent_files"
 /*! @define	GW_REF_MENU_BAR_FILE_MENU_EXIT	The file menu -> exit reference */
 #define GW_REF_MENU_BAR_FILE_MENU_EXIT "gw_menu_bar_file_menu_exit"
 /*! @define	GW_REF_MENU_BAR_FILE_MENU	The file menu reference */
@@ -68,8 +68,8 @@ GtkWidget * gw_menu_file_create ( GtkWindow *w, GtkAccelGroup *ag, GtkWidget *pa
 	GtkWidget *gw_menu_file_export = NULL;
 	GtkWidget *gw_menu_file_export_items = NULL;
 	GtkWidget *gw_menu_file_properties = NULL;
-	GtkWidget *gw_menu_file_recents_files = NULL;
-	GtkWidget *gw_menu_file_recents_files_items = NULL;
+	GtkWidget *gw_menu_file_recent_files = NULL;
+	GtkWidget *gw_menu_file_recent_files_items = NULL;
 	GtkWidget *gw_menu_file_exit = NULL;
 	GtkAccelGroup *gw_menu_file_ag = NULL;
 	guint tmp_key;
@@ -238,21 +238,21 @@ GtkWidget * gw_menu_file_create ( GtkWindow *w, GtkAccelGroup *ag, GtkWidget *pa
 	gtk_container_add ( GTK_CONTAINER ( menu_file), gw_menu_file_separator);
 	gtk_widget_set_sensitive ( gw_menu_file_separator, FALSE);
 
-	/* Menu file -> recents files */
-	gw_menu_file_recents_files = gtk_menu_item_new_with_label ( "");
-	g_strdup_to_gtk_text ( _( "_Recents files"), text_utf8);
-	tmp_key = gtk_label_parse_uline ( GTK_LABEL ( GTK_BIN ( gw_menu_file_recents_files)->child), text_utf8);
+	/* Menu file -> recent files */
+	gw_menu_file_recent_files = gtk_menu_item_new_with_label ( "");
+	g_strdup_to_gtk_text ( _( "_Recent files"), text_utf8);
+	tmp_key = gtk_label_parse_uline ( GTK_LABEL ( GTK_BIN ( gw_menu_file_recent_files)->child), text_utf8);
 	g_free ( text_utf8);
 #if defined ( HAVE_GTK12)
-	gtk_widget_add_accelerator ( gw_menu_file_recents_files, "activate-item", gw_menu_file_ag, tmp_key, 0, 0);
+	gtk_widget_add_accelerator ( gw_menu_file_recent_files, "activate-item", gw_menu_file_ag, tmp_key, 0, 0);
 #endif
-	gtk_widget_ref ( gw_menu_file_recents_files);
-	gtk_object_set_data_full ( GTK_OBJECT ( w), GW_REF_MENU_BAR_FILE_MENU_RECENTS_FILES, gw_menu_file_recents_files, (GtkDestroyNotify) gtk_widget_unref);
-	gtk_container_add ( GTK_CONTAINER ( menu_file), gw_menu_file_recents_files);
-	gtk_widget_add_accelerator ( gw_menu_file_recents_files, "activate", ag, GDK_r, GDK_CONTROL_MASK, GTK_ACCEL_VISIBLE);
+	gtk_widget_ref ( gw_menu_file_recent_files);
+	gtk_object_set_data_full ( GTK_OBJECT ( w), GW_REF_MENU_BAR_FILE_MENU_RECENT_FILES, gw_menu_file_recent_files, (GtkDestroyNotify) gtk_widget_unref);
+	gtk_container_add ( GTK_CONTAINER ( menu_file), gw_menu_file_recent_files);
+	gtk_widget_add_accelerator ( gw_menu_file_recent_files, "activate", ag, GDK_r, GDK_CONTROL_MASK, GTK_ACCEL_VISIBLE);
 
-	gw_menu_file_recents_files_items = gtk_menu_new ( );
-	gtk_menu_item_set_submenu ( GTK_MENU_ITEM ( gw_menu_file_recents_files), gw_menu_file_recents_files_items);
+	gw_menu_file_recent_files_items = gtk_menu_new ( );
+	gtk_menu_item_set_submenu ( GTK_MENU_ITEM ( gw_menu_file_recent_files), gw_menu_file_recent_files_items);
 
 	/* Menu file -> separator */
 	gw_menu_file_separator = gtk_menu_item_new ( );
@@ -388,11 +388,11 @@ gboolean gw_menu_file_set_export ( GtkWindow *w, gchar **plugins) {
 }
 
 
-gboolean gw_menu_file_set_recents_files ( GtkWindow *w, gchar **files) {
+gboolean gw_menu_file_set_recent_files ( GtkWindow *w, gchar **files) {
 	gboolean result = FALSE;
-	GtkMenuItem *recents_files_menu = NULL;
-	GtkWidget *menu_item_recents_files = NULL;
-	GtkWidget *recents_files_submenu = NULL;
+	GtkMenuItem *recent_files_menu = NULL;
+	GtkWidget *menu_item_recent_files = NULL;
+	GtkWidget *recent_files_submenu = NULL;
 	guint i = 0;
 	gchar *text_utf8 = NULL;
 
@@ -402,17 +402,17 @@ gboolean gw_menu_file_set_recents_files ( GtkWindow *w, gchar **files) {
 #endif
 
 	if ( (w != NULL) && (files != NULL) ) {
-		recents_files_menu = GTK_MENU_ITEM ( gtk_object_get_data ( GTK_OBJECT ( w), GW_REF_MENU_BAR_FILE_MENU_RECENTS_FILES));
+		recent_files_menu = GTK_MENU_ITEM ( gtk_object_get_data ( GTK_OBJECT ( w), GW_REF_MENU_BAR_FILE_MENU_RECENT_FILES));
 
-		if ( recents_files_menu != NULL ) {
-			gtk_menu_item_remove_submenu ( recents_files_menu);
+		if ( recent_files_menu != NULL ) {
+			gtk_menu_item_remove_submenu ( recent_files_menu);
 
 #ifdef GW_DEBUG_GUI_COMPONENT
 			g_print ( "*** GW - %s (%d) :: %s() : Creating a new submenu...\n", __FILE__, __LINE__, __PRETTY_FUNCTION__);
 #endif
 
-			recents_files_submenu = gtk_menu_new ( );
-			gtk_menu_item_set_submenu ( recents_files_menu, recents_files_submenu);
+			recent_files_submenu = gtk_menu_new ( );
+			gtk_menu_item_set_submenu ( recent_files_menu, recent_files_submenu);
 
 			for ( i = 0; files[i] != NULL; i++) {
 #ifdef GW_DEBUG_GUI_COMPONENT
@@ -421,21 +421,21 @@ gboolean gw_menu_file_set_recents_files ( GtkWindow *w, gchar **files) {
 #endif
 
 				g_strdup_to_gtk_text ( files[i], text_utf8);
-				menu_item_recents_files = gtk_menu_item_new_with_label ( text_utf8);
+				menu_item_recent_files = gtk_menu_item_new_with_label ( text_utf8);
 				g_free ( text_utf8);
-				gtk_container_add ( GTK_CONTAINER ( recents_files_submenu), menu_item_recents_files);
+				gtk_container_add ( GTK_CONTAINER ( recent_files_submenu), menu_item_recent_files);
 
 				/* Warning use a gint value instead of a gpointer value!! */
-				gtk_signal_connect ( GTK_OBJECT ( menu_item_recents_files), "activate", GTK_SIGNAL_FUNC ( gw_menu_file_recents_files_item_click), GUINT_TO_POINTER ( i));
+				gtk_signal_connect ( GTK_OBJECT ( menu_item_recent_files), "activate", GTK_SIGNAL_FUNC ( gw_menu_file_recent_files_item_click), GUINT_TO_POINTER ( i));
 			}
 
-			gtk_widget_show_all ( GTK_WIDGET ( recents_files_menu));
+			gtk_widget_show_all ( GTK_WIDGET ( recent_files_menu));
 
 			result = TRUE;
 		}
 
 #ifdef GW_DEBUG_GUI_COMPONENT
-	g_print ( "*** GW - %s (%d) :: %s() : recents opened catalog files are added.\n", __FILE__, __LINE__, __PRETTY_FUNCTION__);
+	g_print ( "*** GW - %s (%d) :: %s() : recently opened catalog files are added.\n", __FILE__, __LINE__, __PRETTY_FUNCTION__);
 #endif
 	}
 

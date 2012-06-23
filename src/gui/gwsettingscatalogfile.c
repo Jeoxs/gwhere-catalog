@@ -140,7 +140,7 @@ gint gw_plugin_settings_catalog_file_pane_create ( GtkWindow *settings, GtkConta
 
 
 		/* Adds the history size. */
-		g_strdup_to_gtk_text ( _( "Recents opened catalogs :"), text_utf8);
+		g_strdup_to_gtk_text ( _( "Recently opened catalogs :"), text_utf8);
 		lbl_catalog_history_size = gtk_label_new ( text_utf8);
 		g_free ( text_utf8);
 		gtk_table_attach ( GTK_TABLE ( table_pane), lbl_catalog_history_size, 0, 1, 1, 2, (GtkAttachOptions) (GTK_FILL), (GtkAttachOptions) (0), 0, 0);
@@ -155,7 +155,7 @@ gint gw_plugin_settings_catalog_file_pane_create ( GtkWindow *settings, GtkConta
 #if defined ( HAVE_GTK12)
 		gtk_spin_button_set_shadow_type ( GTK_SPIN_BUTTON ( spn_catalog_history_size), GTK_SHADOW_OUT);
 #endif
-		g_strdup_to_gtk_text ( _( "Select the size of recents opened catalogs history. The default value is 5."), text_utf8);
+		g_strdup_to_gtk_text ( _( "Select the size of recently opened catalogs history. The default value is 5."), text_utf8);
 		gtk_tooltips_set_tip ( tooltips, spn_catalog_history_size, text_utf8, NULL);
 		g_free ( text_utf8);
 
@@ -166,7 +166,7 @@ gint gw_plugin_settings_catalog_file_pane_create ( GtkWindow *settings, GtkConta
 		btn_history_clear = gtk_button_new_with_label ( text_utf8);
 		g_free ( text_utf8);
 		gtk_signal_connect ( GTK_OBJECT ( btn_history_clear), "clicked", (GtkSignalFunc)gw_plugin_settings_catalog_file_btn_clear_history_click, table_pane);
-		g_strdup_to_gtk_text ( _( "Click here to clear the recents opened files history."), text_utf8);
+		g_strdup_to_gtk_text ( _( "Click here to clear the recently opened files history."), text_utf8);
 		gtk_tooltips_set_tip ( tooltips, btn_history_clear, text_utf8, NULL);
 		g_free ( text_utf8);
 		gtk_table_attach ( GTK_TABLE ( table_pane), btn_history_clear, 1, 2, 2, 3, (GtkAttachOptions) (GTK_FILL), (GtkAttachOptions) (0), 0, 0);
@@ -543,7 +543,7 @@ gint gw_plugin_settings_catalog_file_btn_clear_history_click ( GtkButton *btn, G
 
 	if ( pane != NULL)
 	{
-		gw_am_set_settings ( GW_VALUE_APP_RECENTS_FILES, g_strdup ( ""));
+		gw_am_set_settings ( GW_VALUE_APP_RECENT_FILES, g_strdup ( ""));
 		gw_gui_manager_main_interface_update_all ( );
 		result = 0;
 	}

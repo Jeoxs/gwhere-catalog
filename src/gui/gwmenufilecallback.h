@@ -243,7 +243,7 @@ gboolean gw_menu_file_open_saveas_file_selection_ok ( GtkWidget *bt, GtkFileSele
 
 
 /*!
- * @function	gw_menu_file_open_recents_files_save_file_ok
+ * @function	gw_menu_file_open_recent_files_save_file_ok
  * @abstract	Saves the opened catalog and opens one recent.
  * @discussion	This function saves the opened catalog and opens one recent.
  * @param	bt	button invoker
@@ -251,11 +251,11 @@ gboolean gw_menu_file_open_saveas_file_selection_ok ( GtkWidget *bt, GtkFileSele
  * @result	Returns <i>TRUE</i> is the event submited correctly.<br>
  *		Returns <i>FALSE</i> when an error occured.
  */
-gboolean gw_menu_file_open_recents_files_save_file_ok ( GtkWidget *bt, GtkWindow *dg);
+gboolean gw_menu_file_open_recent_files_save_file_ok ( GtkWidget *bt, GtkWindow *dg);
 
 
 /*!
- * @function	gw_menu_file_open_recents_files_save_file_no
+ * @function	gw_menu_file_open_recent_files_save_file_no
  * @abstract	Opens a catalog without save the opened one recent.
  * @discussion	This function opens a catalog without save the opened one recent.
  * @param	bt	button invoker
@@ -263,11 +263,11 @@ gboolean gw_menu_file_open_recents_files_save_file_ok ( GtkWidget *bt, GtkWindow
  * @result	Returns <i>TRUE</i> is the event submited correctly.<br>
  *		Returns <i>FALSE</i> when an error occured.
  */
-gboolean gw_menu_file_open_recents_files_save_file_no ( GtkWidget *bt, GtkWindow *dg);
+gboolean gw_menu_file_open_recent_files_save_file_no ( GtkWidget *bt, GtkWindow *dg);
 
 
 /*!
- * @function	gw_menu_file_open_recents_files_saveas_file_selection_ok
+ * @function	gw_menu_file_open_recent_files_saveas_file_selection_ok
  * @abstract	Saves as file name the opened catalog and opens one recent.
  * @discussion	This function saves as file name the opened catalog and opens one recent.
  * @param	bt	button invoker
@@ -275,7 +275,7 @@ gboolean gw_menu_file_open_recents_files_save_file_no ( GtkWidget *bt, GtkWindow
  * @result	Returns <i>TRUE</i> is the event submited correctly.<br>
  *		Returns <i>FALSE</i> when an error occured.
  */
-gboolean gw_menu_file_open_recents_files_saveas_file_selection_ok ( GtkWidget *bt, GtkFileSelection *fs);
+gboolean gw_menu_file_open_recent_files_saveas_file_selection_ok ( GtkWidget *bt, GtkFileSelection *fs);
 
 
 /*!
@@ -430,7 +430,7 @@ void gw_menu_file_exit ( void);
 
 
 /*!
- * @function	gw_menu_file_recents_files_item_click
+ * @function	gw_menu_file_recent_files_item_click
  * @abstract	Loads the selected recent file.
  * @discussion	This function loads the selected recent file.
  * @param	m	menu item invoker
@@ -438,7 +438,7 @@ void gw_menu_file_exit ( void);
  * @result	Returns <i>TRUE</i> is the event submited correctly.<br>
  *		Returns <i>FALSE</i> when an error occured.
  */
-gboolean gw_menu_file_recents_files_item_click ( GtkMenuItem *m, gpointer data);
+gboolean gw_menu_file_recent_files_item_click ( GtkMenuItem *m, gpointer data);
 
 
 gboolean gw_menu_file_import_item_click ( GtkMenuItem *m, gpointer data);

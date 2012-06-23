@@ -66,7 +66,7 @@ gboolean gw_menu_file_new_click ( GtkMenuItem *mi, GtkWindow *w) {
 			/* If has been modified, ask to save it before create new catalog */
 			plugin = (GWCatalogPlugin*)gw_db_context_get_plugin ( context);
 			catalog = plugin->gw_db_catalog_get_db_catalog ( context);
-			msg = g_strconcat ( _( "Would you want save catalog :\n\n"), gw_helper_db_catalog_get_full_name ( catalog), "\n", NULL);
+			msg = g_strconcat ( _( "Do you want to save catalog:\n\n"), gw_helper_db_catalog_get_full_name ( catalog), "\n", NULL);
 			gw_dialog_box_create ( w, _( "New file"), msg, GTK_SIGNAL_FUNC ( gw_menu_file_new_save_file_ok), GTK_SIGNAL_FUNC ( gw_menu_file_new_save_file_no), NULL, NULL);
 			g_free ( msg);
 			gw_db_catalog_free ( catalog);
