@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-23 18:43+1200\n"
+"POT-Creation-Date: 2012-06-23 20:09+1200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -268,7 +268,7 @@ msgid "_Properties"
 msgstr ""
 
 #: src/gui/gwmenufile.c:243
-msgid "_Recents files"
+msgid "_Recent files"
 msgstr ""
 
 #: src/gui/gwmenufile.c:266
@@ -289,17 +289,9 @@ msgstr ""
 msgid "There is no available catalog plugin"
 msgstr ""
 
-#. if ( gw_db_catalog_get_db_name ( catalog)!=NULL && strlen ( gw_db_catalog_get_db_name ( catalog))>0 ) {
-#. msg[1] = g_strconcat ( _( "Would you want save catalog :\n\n"), gw_db_catalog_get_db_name ( catalog), "\n", NULL);
-#. } else {
-#. msg[1] = g_strconcat ( _( "Would you want save catalog :\n\n"), gw_db_catalog_get_name ( catalog), "\n", NULL);
-#. }
-#. If has been modified, ask to save it before open another catalog
-#: src/gui/gwmenufilecallback.c:69 src/gui/gwmenufilecallback.c:102
-#: src/gui/gwmenufilecallback.c:138 src/gui/gwmenufilecallback.c:180
-#: src/gui/gwmenufilecallback.c:461 src/gui/gwmenufilecallback.c:1367
+#: src/gui/gwmenufilecallback.c:69
 msgid ""
-"Would you want save catalog :\n"
+"Do you want to save catalog:\n"
 "\n"
 msgstr ""
 
@@ -318,6 +310,20 @@ msgstr ""
 #: src/gui/gwmenufilecallback.c:702 src/gui/gwmenufilecallback.c:719
 #: src/gui/gwmenufilecallback.c:829 src/gui/gwtoolbar.c:81
 msgid "Open catalog"
+msgstr ""
+
+#. if ( gw_db_catalog_get_db_name ( catalog)!=NULL && strlen ( gw_db_catalog_get_db_name ( catalog))>0 ) {
+#. msg[1] = g_strconcat ( _( "Would you want save catalog :\n\n"), gw_db_catalog_get_db_name ( catalog), "\n", NULL);
+#. } else {
+#. msg[1] = g_strconcat ( _( "Would you want save catalog :\n\n"), gw_db_catalog_get_name ( catalog), "\n", NULL);
+#. }
+#. If has been modified, ask to save it before open another catalog
+#: src/gui/gwmenufilecallback.c:102 src/gui/gwmenufilecallback.c:138
+#: src/gui/gwmenufilecallback.c:180 src/gui/gwmenufilecallback.c:461
+#: src/gui/gwmenufilecallback.c:1367
+msgid ""
+"Would you want save catalog :\n"
+"\n"
 msgstr ""
 
 #: src/gui/gwmenufilecallback.c:103 src/gui/gwmenufilecallback.c:1357
@@ -1444,12 +1450,12 @@ msgstr ""
 
 #. Adds the history size.
 #: src/gui/gwsettingscatalogfile.c:143
-msgid "Recents opened catalogs :"
+msgid "Recently opened catalogs :"
 msgstr ""
 
 #: src/gui/gwsettingscatalogfile.c:158
 msgid ""
-"Select the size of recents opened catalogs history. The default value is 5."
+"Select the size of recently opened catalogs history. The default value is 5."
 msgstr ""
 
 #. Adds the clear history.
@@ -1458,7 +1464,7 @@ msgid "Clear history"
 msgstr ""
 
 #: src/gui/gwsettingscatalogfile.c:169
-msgid "Click here to clear the recents opened files history."
+msgid "Click here to clear the recently opened files history."
 msgstr ""
 
 #. Adds the autload catalog option.
@@ -1589,7 +1595,7 @@ msgid "Quick"
 msgstr ""
 
 #: src/gui/gwsettingsgeneral.c:44
-msgid "Generals options"
+msgid "General options"
 msgstr ""
 
 #: src/gui/gwsettingsgui.c:54
