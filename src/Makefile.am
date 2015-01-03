@@ -34,6 +34,6 @@ gwhere_LDADD = \
 	@top_srcdir@/src/data/libgwdata.a \
 	@top_srcdir@/src/gui/libgwgui.a \
 	@GTK_LIBS@ \
-	$(INTLLIBS)
+	$(INTLLIBS) -lgmodule-2.0
 
 gwhere_LDFLAGS =
